@@ -1,0 +1,6 @@
+admin|admin|admin@gmail.com|8801234567890|Admin
+seller|seller|seller@yahoo.com|8801631287459|Seller
+admin2|admin2|admin2@yahoo.com|8801795328617|Admin
+owner|owner|owner@gmail.com|8801912345678|Admin
+service|serve|service@outlook.com|8801898745632|Seller
+salesman|sale|salesman@gmail.com|8801545698712|Seller
