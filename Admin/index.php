@@ -6,7 +6,7 @@
 	if (isset($_POST['submit'])) {
 			$x= $_POST['username'];
 			$y= $_POST['password'];
-			$myfile = fopen('UserList.txt', 'r');
+			$myfile = fopen('php/UserList.txt', 'r');
 			
 			while (!feof($myfile)) {
 				$data = fgets($myfile);
@@ -27,7 +27,7 @@
 
 			if ($temp == TRUE) {
 				
-				header('location:Home.php');
+				header('location:view/admin_home.php');
 			}else{
 				$message = "Invalid Username or Password";
 				echo "<script>alert('$message');</script>";
@@ -40,58 +40,58 @@
 <html>
 <head>
 	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/Design.css">
 </head>
 <body>
-	<table border="0" width="100%" height="642px" bgcolor="PaleTurquoise">
-		<tr>
-			<td>
-				<form method="POST" action="">
-					<table align="center" bgcolor="CornflowerBlue" width="500px" height="300px" cellspacing="20px">
-						<tr>
-							<td>
-								<img src="LoginLogo.jpg" align="left" width="150px" height="150px">
-								<center>
-									<h1><font color="DarkBlue" face="Cursive"><u>Login Panel</u></font></h1>
-								</center>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<fieldset >
-									<legend><h3>Login</h3></legend><br>
-									<table cellspacing="30px">
-										<tr>
-											<td width="35%">
-												User Name :
-											</td>
-											<td>
-												<input type="text" name="username" placeholder="Enter a Valid User Name" required>
-											</td>
-										</tr>
-										<tr>
-											<td width="35%">
-												Password :
-											</td>
-											<td>
-												<input type="Password" name="password" placeholder="Enter the Password" required>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<input type="submit" name="submit" value="Log In">
-											</td>
-											<td >
-												<input type="reset" name="reset" value="Reset">
-											</td>
-										</tr>
-									</table>
-								</fieldset>
-							</td>
-						</tr>
-					</table>
-				</form>
-			</td>
-		</tr>
-	</table>
+	<div class="header">
+		<marquee><h1>Online Accessories Store</h1></marquee>
+	</div>
+	
+	<form method="POST" action="">
+		<table align="center" bgcolor="LightBlue" width="40%" cellspacing="5px">
+			<tr>
+				<td>
+					<img src="LoginLogo.jpg" align="left" width="100px" height="100px">
+					<center>
+						<h1><font color="DarkBlue" face="Cursive"><u>Login Panel</u></font></h1>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<fieldset>
+						<legend><h3>Login</h3></legend><br>
+						<table cellspacing="30px">
+							<tr>
+								<td width="35%">
+									<h4>User Name :</h4>
+								</td>
+								<td>
+									<input type="text" name="username" placeholder="Enter a Valid User Name">
+								</td>
+							</tr>
+							<tr>
+								<td width="35%">
+									<h4>Password :</h4>
+								</td>
+								<td>
+									<input type="Password" name="password" placeholder="Enter the Password">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" name="submit" value="Log In">
+								</td>
+								<td >
+									<input type="reset" name="reset" value="Reset">
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</td>
+			</tr>
+		</table>
+	</form>
+		
 </body>
 </html>
